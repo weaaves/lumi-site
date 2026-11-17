@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Lumi Light — Support</title>
+<link rel="icon" href="../icon.png"><style>:root{--bg:#070a16;--card:#11152a;--ink:#eef0fa;--dim:#aeb3cc;--gold:#ffcc66;--line:#262c48}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);
+font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--gold)}.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header{padding:34px 0 18px;background:radial-gradient(ellipse at 50% 0,#1c2450 0,var(--bg) 70%)}
+.brand{display:flex;gap:16px;align-items:center}.brand img{width:72px;height:72px;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.5)}
+h1{margin:0;font-size:32px}h1 small{display:block;font-size:16px;color:var(--dim);font-weight:400}
+nav{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+nav a{text-decoration:none}nav button{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:5px 10px;font:inherit;cursor:pointer}
+nav .langs{margin-left:auto;display:flex;gap:6px}nav button.on{border-color:var(--gold);color:var(--gold)}
+main{padding:10px 0 40px}h2{color:var(--gold);font-size:24px;margin:28px 0 8px}h3{font-size:18px;margin:22px 0 4px}
+.meta{color:var(--dim);font-size:14px}section.l{display:none}section.l.on{display:block}
+footer{color:var(--dim);font-size:14px;border-top:1px solid var(--line);padding:18px 0 40px}</style></head><body>
+<header><div class="wrap brand"><img src="../icon.png" alt="Lumi Light"><h1>Lumi Light<small data-en="A light-beam puzzle" data-uk="Головоломка зі світлом">A light-beam puzzle</small></h1></div></header>
+<div class="wrap"><nav><a href="../privacy/" data-en="Privacy Policy" data-uk="Політика конфіденційності">Privacy Policy</a><a href="../support/" data-en="Support" data-uk="Підтримка">Support</a><span class="langs"><button data-l="en" onclick="setLang('en')">English</button><button data-l="uk" onclick="setLang('uk')">Українська</button></span></nav>
+<main><section class="l on" data-lang="en" lang="en"><h2>Support</h2><p>Found a bug, lost progress or have an idea? Write to <a href="mailto:lumisupport52@gmail.com">lumisupport52@gmail.com</a> — please mention your device model and iOS version.</p><h3>Purchases</h3><p>If a purchase did not arrive, open Settings → Restore purchases. Refunds are handled by Apple at reportaproblem.apple.com.</p><h3>Progress on a new device</h3><p>Sign in to the same Apple Account with iCloud turned on, and your progress will sync automatically.</p></section><section class="l" data-lang="uk" lang="uk"><h2>Підтримка</h2><p>Знайшли помилку, втратили прогрес чи маєте ідею? Пишіть на <a href="mailto:lumisupport52@gmail.com">lumisupport52@gmail.com</a> — вкажіть, будь ласка, модель пристрою й версію iOS.</p><h3>Покупки</h3><p>Якщо покупка не надійшла, відкрийте Налаштування → Відновити покупки. Поверненням коштів займається Apple на reportaproblem.apple.com.</p><h3>Прогрес на новому пристрої</h3><p>Увійдіть у той самий обліковий запис Apple з увімкненим iCloud — прогрес синхронізується сам.</p></section></main><footer>© 2026 Artur Lisetskyi · <a href="mailto:lumisupport52@gmail.com">lumisupport52@gmail.com</a></footer></div><script>
+function setLang(l){document.querySelectorAll('section.l').forEach(s=>s.classList.toggle('on',s.dataset.lang==l));
+document.querySelectorAll('[data-'+l+']').forEach(e=>e.textContent=e.dataset[l]);
+document.querySelectorAll('nav .langs button').forEach(b=>b.classList.toggle('on',b.dataset.l==l));
+document.documentElement.lang=l;try{localStorage.setItem('ll_lang',l)}catch(e){}}
+var q=new URLSearchParams(location.search).get('lang'),s=null;try{s=localStorage.getItem('ll_lang')}catch(e){}
+var l=q||s||((navigator.language||'en').slice(0,2)=='uk'?'uk':'en');setLang(l=='uk'?'uk':'en');
+</script></body></html>
